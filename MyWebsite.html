@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        div.page{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 75px 10fr 40px;
+            grid-template-areas: 'header header'
+                                 'menu mainbody'
+                                 'footer footer';
+
+        }
+
+        div.header{
+            background-color: blue;
+            text-align: center;
+            grid-area: header;
+            
+        }
+        div.footer{
+            background-color: lightblue;
+            text-align: right;
+            grid-area: footer;
+            
+        }
+        div.mainbody{
+            grid-area: mainbody;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page">
+    
+    <div class="header">
+        <h2>My Website</h2>
+    </div>
+
+    <div class="menu">
+        <h3>Navigation</h3>
+        <ul>
+            <li>
+                <a target="blank" href="https://soundcloud.com/mathias-windseth">Home</a>
+            </li>
+            <li>
+                <a target="blank" href="https://www.w3schools.com/html/html_lists.asp">about</a>
+            </li>
+            <li>
+                <a target="blank" href="https://www.google.com/search?gs_ssp=eJzj4tTP1TcwLyvMSzZg9DK8sPli84WNF3Zd2KAApPZd2KgAZG-6sOHClosNFzZcbLqw92L3ha0KFzuAzA0gDgAnuiWz&q=%D0%B3%D1%83%D0%B1%D0%BA%D0%B0+%D0%B1%D0%BE%D0%B1+%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82%D0%BD%D1%8B%D0%B5+%D1%88%D1%82%D0%B0%D0%BD%D1%8B&oq=gopka+&aqs=chrome.1.69i57j46i10j0i10l2j0i10i30l3.3269j0j7&sourceid=chrome&ie=UTF-8">contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mainbody">
+        <p>The hole in the doughnut was invented by a 16-year-old sailor named Hanson Gregory. 
+            In 1916,the Washington Post interviewed Gregory, 
+            the man who claimed to have invented the modern donut back in 1847. 
+            Gregory was tired of eating greasy and undercooked donuts with raw dough on the insides.
+        </p>
+    </div>
+        
+    <div class="footer">Copyright@2021 Gubka Bob</div>
+
+</div>
+    
+</body>
+</html>
