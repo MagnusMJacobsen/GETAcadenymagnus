@@ -7,7 +7,7 @@
 </head>
 <style>
     body{
-        background-color: black;
+        background-color: rgb(0, 0, 0);
     }
     h1{
         color: chartreuse;
@@ -16,66 +16,59 @@
     }
     h2{
         color: deeppink;
-        font-size: 75px;
+        font-size: 50px;
     }
 </style>
 <body>
 
     <h1>Jacobsen's Quiz</h1>
 
-    <h2 id="s1">hvor mange månder i et år?</h2>
+    <h2>hvor mange månder i et år?</h2>
 
-        <script>
-            function Ds1() {
-                document.getElementById('s1').innerHTML = 'riktig!'
-           }
-            function Ds2() {
-                document.getElementById('s1').innerHTML = 'feil!'
-           }
-
-
-        </script>
-   
 <h2 onclick="Ds2()">8</h2>
 <h2 onclick="Ds2()">10</h2>
 <h2 onclick="Ds1()">12</h2>
+    <h1 id="s1">svar</h1>
 
-    <h2 id="s2">hvor mange uker i et år?</h2>
+
+    <h2>hvor mange uker i et år?</h2>
     
-         <script>
-            function ax1() {
-                document.getElementById('s2').innerHTML = 'riktig!'
-           }
-            function ax2() {
-                document.getElementById('s2').innerHTML = 'feil!'
-           }
-
-
-        </script>
-
 <h2 onclick="ax2()">50</h2>
 <h2 onclick="ax1()">52</h2>
 <h2 onclick="ax2()">54</h2>
+    <h1 id="s2">svar</h1>
 
-
-    <h2 id="s3">hvor mange dager i et år?</h2>
+ 
     
-         <script>
-            function bx1() {
-                document.getElementById('s3').innerHTML = 'riktig!'
-           }
-            function bx2() {
-                document.getElementById('s3').innerHTML = 'feil!'
-           }
-
-
-        </script>
+    <h2>hvor mange dager i et år?</h2>      
 
 <h2 onclick="bx1()">365</h2>
 <h2 onclick="bx2()">362</h2>
 <h2 onclick="bx2()">260</h2>
+    <h1 id="s3">svar</h1>
 
+<script>
+    function Ds1() {
+        document.getElementById('s1').innerHTML = 'riktig!'
+    }
+    function Ds2() {
+        document.getElementById('s1').innerHTML = 'feil!'
+    }
 
+    function ax1() {
+        document.getElementById('s2').innerHTML = 'riktig!'
+    }
+    function ax2() {
+        document.getElementById('s2').innerHTML = 'feil!'
+    }
+ 
+    function bx1() {
+        document.getElementById('s3').innerHTML = 'riktig!'
+    }
+    function bx2() {
+        document.getElementById('s3').innerHTML = 'feil!'
+    }
+</script>
 
 
     
