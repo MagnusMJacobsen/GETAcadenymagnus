@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    h1{
+        color: chartreuse;
+        text-align: center;
+        font-size: 100px;
+    }
+    h2{
+        color: deeppink;
+        font-size: 75px;
+    }
+</style>
+<body>
+
+    <h1>Jacobsen's Quiz</h1>
+
+    <h2 id="s1">hvor mange månder i et år?</h2>
+
+        <script>
+            function Ds1() {
+                document.getElementById('s1').innerHTML = 'riktig!'
+           }
+            function Ds2() {
+                document.getElementById('s1').innerHTML = 'feil!'
+           }
+
+
+        </script>
+   
+<h2 onclick="Ds2()">8</h2>
+<h2 onclick="Ds2()">10</h2>
+<h2 onclick="Ds1()">12</h2>
+
+    <h2 id="s2">hvor mange uker i et år?</h2>
+    
+         <script>
+            function ax1() {
+                document.getElementById('s2').innerHTML = 'riktig!'
+           }
+            function ax2() {
+                document.getElementById('s2').innerHTML = 'feil!'
+           }
+
+
+        </script>
+
+<h2 onclick="ax2()">50</h2>
+<h2 onclick="ax1()">52</h2>
+<h2 onclick="ax2()">54</h2>
+
+
+    <h2 id="s3">hvor mange dager i et år?</h2>
+    
+         <script>
+            function bx1() {
+                document.getElementById('s3').innerHTML = 'riktig!'
+           }
+            function bx2() {
+                document.getElementById('s3').innerHTML = 'feil!'
+           }
+
+
+        </script>
+
+<h2 onclick="bx1()">365</h2>
+<h2 onclick="bx2()">362</h2>
+<h2 onclick="bx2()">260</h2>
+
+
+
+
+    
+</body>
+</html>
