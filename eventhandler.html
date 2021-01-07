@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    
+    <button ondblclick="DoubleClick()">PressMe!</button>
+
+
+    <div oncontextmenu="BoxClick()" contextmenu="mymenu">
+    <p>Right-click me!</p>
+    </div>
+
+    <input type="text" onkeydown="OnKeyDown()">
+
+    <p id="demo"></p>
+
+    <script>
+        function DoubleClick() {
+            document.getElementById("demo").innerHTML += "<li>DoubleClick</li>";
+            console.log("DoubleClick");
+        }
+        function BoxClick() {
+            document.getElementById("demo").innerHTML += "<li>ConTextMenu</li>";
+            console.log("BoxClick");
+        }
+        function OnKeyDown() {
+            document.getElementById("demo").innerHTML += "<li>KeyDown</li>";
+            console.log("OnKeyDown");
+        }
+        
+    </script>
+</body>
+</html>
