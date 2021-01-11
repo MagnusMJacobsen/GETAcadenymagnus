@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    body{
-        background-color: black;
-    }
-</style>
+
 <body>
+
+    <button onclick="klikk1(this)">1</button><button onclick="klikk1(this)">2</button><button onclick="klikk1(this)">3</button><br>
+    <button onclick="klikk1(this)">4</button><button onclick="klikk1(this)">5</button><button onclick="klikk1(this)">6</button><br>
+    <button onclick="klikk1(this)">7</button><button onclick="klikk1(this)">8</button><button onclick="klikk1(this)">9</button>
+
+    
+    <div id="info"></div>
+
+    <script>
+
+    function klikk1(name) {
+                
+     var info=document.getElementById('info').innerHTML
+         document.getElementById('info').innerHTML = info + name.innerHTML
+    }
+
+    </script>
     
 </body>
+
 </html>
