@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="lasttid"()>
     
-    
-    <p id="time"></p>
+
+    <div id="time"></div>
 
     <script>
-            document.getElementById('time').innerHTML = '' + new Date().toTimeString();
-        
-    </script>
+        function lasttid(name) {
+
+            var info=document.getElementById('time').innerHTML = '' + new Date().toTimeString();
+
+        }
+            
+     </script>
     
 </body>
 </html>
