@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body onload="lasttid"()>
+
+<body onload="tidLastetInn()"> <!--onload kjører først når siden er lastet inn-->
+
+    <p id="time"> </p>
+
+    <img src="media_stasis_3.jpg" > <!--bare et bilde-->
     
-
-    <div id="time"></div>
-
     <script>
-        function lasttid(name) {
+        var outputDiv = document.getElementById('time'); // en variabel som vi kan kalle med en eller flere funksjoner.
 
-            var info=document.getElementById('time').innerHTML = '' + new Date().toTimeString();
+        tidScriptTagKjøres(); // kjøres så fort scriptet er lastet.
 
+        function tidLastetInn(){
+            outputDiv.innerHTML += '<br> tid side lastet MS: ' + new Date().getMilliseconds() // denne func blir kallt når siden er lastet inn.
         }
-            
-     </script>
+
+        function tidScriptTagKjøres(){
+            outputDiv.innerHTML += '<br> tid script-tag MS: ' + new Date().getMilliseconds() // denne func blir kalt når tag kjøres 
+        }
+    </script>
     
 </body>
 </html>
