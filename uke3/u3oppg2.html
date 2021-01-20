@@ -12,13 +12,18 @@
                 //model
         var personName = null;
         var age = null;
+        var eMail = null;
+        var userName
 
                 //view
         updateView();
         function updateView() {
             var nameTxt =personName ? `hei, ${personName}:` : `fyll ut navn i tekstfeltet,`;
             var ageTxt =age ? `Du er ${age} år gammel,` : `velg alder i sliden`;
+            var mailTxt =eMail ? `email ${eMail},` : `skriv inn email i tekstfeltet`;
+            var userNameTxt =userName ? `username ${userName},` : `skriv inn brukernavnet i tekstfeltet`;
             document.getElementById('app').innerHTML = `
+               
                 Hva heter du? <br/>
                 <input
                     type="text"
@@ -40,6 +45,24 @@
 
                 <br/>
 
+                Hva er emailen? <br/>
+                <input
+                    type="text"
+                    oninput="eMail = this.value; "
+                    value="${eMail || ''}"
+                >
+
+                <br/>
+
+                Hva er usernamet ditt? <br/>
+                <input
+                    type="text"
+                    oninput="userName = this.value; "
+                    value="${userName || ''}"
+                >
+
+                <br/>
+
                 <button onclick="register()">Register</button>
 
                 <h3>Se her:</hr>
@@ -47,6 +70,10 @@
                 ${nameTxt}
                 <hr/>
                 ${ageTxt}
+                <hr/>
+                ${mailTxt}
+                <hr/>
+                ${userNameTxt}
                 <hr/>
                
             `;
