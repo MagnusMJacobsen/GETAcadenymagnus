@@ -35,6 +35,13 @@
             updateView();
         }
 
+        function cheaterButton() {
+            points += 100;
+            pointsPerClick++;
+            alert("Fing cheater");
+            updateView();
+        }
+
         // view
         updateView();
         function updateView() {
@@ -43,6 +50,7 @@
                 <div id="image" onclick="doClick()">${smiley}</div>
                 <div id="pointsInfo">${points}</div>
                 <button onclick="buyUpgrade()">Kjøp oppgradering (10 poeng)</button>
+                <button onclick="cheaterButton()">Cheater</button>
             `;
         }
     </script>

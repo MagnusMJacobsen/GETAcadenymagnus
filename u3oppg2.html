@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+                //model
+        var personName = null;
+        var age = null;
+
+                //view
+        updateView();
+        function updateView() {
+            var nameTxt =personName ? `hei, ${personName}:` : `fyll ut navn i tekstfeltet,`;
+            var ageTxt =age ? `Du er ${age} år gammel,` : `velg alder i sliden`;
+            document.getElementById('app').innerHTML = `
+                Hva heter du? <br/>
+                <input
+                    type="text"
+                    oninput="personName = this.value; "
+                    value="${personName || ''}"
+                >
+
+                <br/>
+
+                Hvor gammel er du? <br/>
+                <input
+                    type="range"
+                    min="1"
+                    max="120"
+                    step="1"
+                    value="${age || 20}"
+                    oninput="age = this.value"
+                >
+
+                <br/>
+
+                <button onclick="register()">Register</button>
+
+                <h3>Se her:</hr>
+                <hr/>
+                ${nameTxt}
+                <hr/>
+                ${ageTxt}
+                <hr/>
+               
+            `;
+        }
+
+                //controller
+        function register() {
+            alert(personName + ' ' + age);
+            updateView();
+        }
+    </script>
+    
+</body>
+</html>
