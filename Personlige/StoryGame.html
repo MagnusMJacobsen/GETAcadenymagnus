@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: teal;
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+        font-size: 30px;
+
+    }
+    .buttonDiv{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(148, 51, 103);
+        border: rgb(235, 89, 89) 2px solid;
+        float: left; 
+        margin: 10px;
+        text-align: center;
+        font-size: 14px;
+        
+    }
+</style>
+<body>
+
+    <div id="app"></div>
+        
+<script>
+
+    //Hjelpevariabel
+        var app = document.getElementById('app');
+
+
+    //MODEL
+
+        var currentlySelectedDivs = "";
+        var correctCode = "313";
+        var openOrNotMessage = "Door Is Locked.";
+        // var doorIsOpen = ""; 
+
+
+    //VIEW
+        drawView();
+
+            function drawView(){
+                var html = `
+                    <div>Trykk riktig kode for og komme vidre: ${currentlySelectedDivs} </div>    
+                    <div class="buttonDiv" onclick="selectDiv(this.innerHTML), checkIfCorrectCode()">1</div>
+                    <div class="buttonDiv" onclick="selectDiv(this.innerHTML), checkIfCorrectCode()">2</div>
+                    <div class="buttonDiv" onclick="selectDiv(this.innerHTML), checkIfCorrectCode()">3</div> 
+                    ${openOrNotMessage}
+                `;
+
+                    app.innerHTML = html;
+            }
+
+
+    //CONTROLLER
+        function selectDiv(divContent){
+            currentlySelectedDivs += divContent;
+                drawView();
+}
+
+        function checkIfCorrectCode(){
+            if(currentlySelectedDivs.length > 3){
+                currentlySelectedDivs = "";
+            }
+
+            if(currentlySelectedDivs == correctCode){
+                openOrNotMessage = "<button onclick='alert(`HEISANN`)'>OPEN ME!</button>";
+                    drawView();
+            }
+        }
+
+
+</script>
+</body>
+</html>
